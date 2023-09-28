@@ -1,0 +1,76 @@
+                                           Git-Commands
+
+
+#git clone - The git clone command is used to create a copy of a remote Git repository on your local machine. It allows you to download all the files and commit history from a remote repository and set up a local copy that you can work with. 
+
+syntax - git clone <repository_url>
+
+
+#git log -  The git log command is used to view the commit history of a Git repository. It displays a list of commits in reverse chronological order, showing details such as the commit hash, author, date, and commit message. Here's the basic syntax:
+
+git log
+
+#git log --oneline - When you run this command, it will display a list of commits in a compact format, with each commit represented by its abbreviated hash and the first line of its commit message. This format is often used for a quick overview of the commit history.
+
+#git status - The git status command is used to display the status of your working directory and staging area in a Git repository. It provides information about which files have been modified, which files are staged for the next commit, and which files are untracked. This is a fundamental command in Git that helps you understand the state of your project. 
+
+syntax - git status
+
+#git add - The git add command is used to stage changes in your working directory for inclusion in the next commit. When you make changes to files in your Git repository, these changes are initially in an "unstaged" state. By running git add, you select which changes you want to include in the next commit, effectively moving them to the "staged" state. Once changes are staged, you can then commit them using git commit
+
+syntax - git add <file_or_directory> / git add .
+
+#git commit - The git commit command is used to save the changes you've staged using git add into the Git repository as a new commit. A commit represents a snapshot of your project's state at a particular point in time and includes a commit message that describes the changes made in that commit. Here's the basic syntax of git commit: 
+  syntax - git commit -m "Your commit message here"
+
+#git push - The git push command is used to upload your local Git repository's commits to a remote repository. This is a fundamental Git operation when collaborating with others or when you want to update a remote repository with your local changes. Here's the basic syntax of git push:
+
+syntax - git push <remote_name> <branch_name>
+For example, if you want to push the changes from your local "main" branch to the "main" branch on the "origin" remote, you would use:git push origin main
+
+
+#git pull - The git pull command is used to update your local Git repository with changes from a remote repository. It combines two actions: git fetch and git merge or git rebase, depending on your configuration. This command is particularly useful when you want to incorporate changes made by others into your local branch. 
+
+syntax - git pull <remote_name> <branch_name>
+
+# git fork - The git fork command does not exist as a built-in Git command. Instead, the concept of forking is typically associated with code hosting platforms like GitHub, GitLab, and Bitbucket, where you can fork a repository to create your own copy of it.
+
+The git fork command is not part of the standard Git toolset because forking is a concept introduced by code hosting platforms to facilitate collaboration and contribution in a distributed development environment. You interact with forks primarily through the platform's web interface and the standard Git commands for cloning, committing, and pushing changes to your forked repository.
+
+#git stash - The git stash command is used to temporarily save changes in your working directory that are not yet ready to be committed. This is particularly useful when you need to switch to a different branch or work on a different task without committing your current changes. Stashing allows you to store your changes in a "stash" and later apply those changes to your working directory. Here's how to use git stash
+
+ syntax - git stash save "Your stash message"
+          git stash list
+          git stash apply
+
+#git rebase - The git rebase command in Git is used to incorporate changes from one branch into another while maintaining a linear commit history. It allows you to move, combine, or modify a series of commits from one branch onto another branch, often to keep your branch up-to-date with the latest changes from another branch. Rebasing can provide a cleaner commit history compared to merging, but it should be used with caution, especially in a shared or collaborative environment. Here's the basic syntax of git rebase
+
+git rebase <upstream>
+git checkout your-branch
+git rebase main
+
+#git cherry-pick - The git cherry-pick command is used to apply a specific commit from one branch to another. It allows you to select and pick individual commits from one branch and apply them to another branch, which can be useful when you want to bring in specific changes from one branch to another without merging or rebasing the entire branch. Here's the basic syntax of git cherry-pick:
+
+syntax - git cherry-pick <commit-hash>
+         git cherry-pick "commit-id"
+
+#git fetch - The git fetch command is used to retrieve the latest changes from a remote repository without merging them into your local branch. It allows you to update your local repository with the changes made in the remote repository, so you can review and decide how to incorporate them into your working branch. Here's the basic syntax of git fetch:
+
+syntax - git fetch <remote_name>
+Fetching All Branches: To fetch all branches from the remote repository, use the --all option: git fetch --all
+
+Fetching a Specific Branch: To fetch changes for a specific branch, specify both the remote and branch name:git fetch <remote_name> <branch_name>
+
+
+#git remote add - The git remote add command is used to add a new remote repository to your Git project. A remote repository is a copy of your project hosted on a different server or location, often used for collaboration or as a backup. You can use this command to establish a connection between your local Git repository and a remote repository. Here's the basic syntax of git remote add:
+
+syntax - git remote add <remote_name> <remote_url>
+
+Here's an example of how to use git remote add to add a remote repository: git remote add origin https://github.com/username/repository-name.git
+
+You can list the remote repositories associated with your Git project using the git remote -v command: git remote -v
+
+
+
+
+
