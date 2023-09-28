@@ -70,6 +70,11 @@ Here's an example of how to use git remote add to add a remote repository: git r
 
 You can list the remote repositories associated with your Git project using the git remote -v command: git remote -v
 
+#git restore - The git restore command in Git is used to restore or discard changes in your working directory or the staging area (index). It allows you to undo changes made to your files and restore them to a previous state. Depending on how you use it, git restore can be used for various purposes, such as unstaging changes, reverting changes to a previous commit, or resetting changes in your working directory.
+
+syntax - git restore <file>
+
+
 
 
 
